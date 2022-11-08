@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Dice</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      
+    <div class="container">
+        <p id="p" class="display-3 text-center">TO DİCE</p>
+        <hr>
+
+         <button class="btn btn-success" id="dice1" type="button">1.to dice</button>
+         <button class="btn btn-success" id="dice2" type="button">2.to dice</button>
+    </div>
+    
+    <script>
+        let dice1 = document.getElementById("dice1");
+        let dice2 = document.getElementById("dice2");
+
+        dice1.onclick = function(){
+            let random = Number(Math.round(Math.random() * 5 ) + 1);
+            alert(random);
+            document.getElementById("dice1").disabled = true;
+        };
+        dice2.onclick = function(){
+            let random = Number(Math.round(Math.random() * 5) + 1);
+            alert(random);
+            document.getElementById("dice2").disabled = true;
+        };
+
+    </script>
+  </body>
+</html>
